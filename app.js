@@ -13,7 +13,7 @@ function calc(callback, num1, num2) {
     if (typeof num1 !== 'number') {
         return new Error("Only numbers accepted.");
     }
-    if (!num2) {
+    if (num2 === undefined || num2 === null) {
         console.log(callback.name);
         if (callback.name !== "sqrt" && callback.name !== "pot2") {
             return new Error("This function required two numeric parameters, and you have passed only one");
@@ -34,6 +34,6 @@ function calc(callback, num1, num2) {
 //console.log(calc(subt, 25, 5));
 //console.log(calc(subt, 25, 10));
 //console.log(calc(subt, 25, 10));
-//console.log(calc(divd, 25, 10));
+console.log(calc(divd, 25, 0));
 //console.log(calc(sqrt, 25));
-console.log(calc(pot, 9));
+//console.log(calc(pot, 9));
