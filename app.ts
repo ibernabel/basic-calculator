@@ -6,7 +6,7 @@ const pot = (num: number = 1, expot: number = 2): number => num ** expot;
 //const pot2 = (num: number = 1): number => num * num;
 const sqrt = (num: number = 1): number => Math.sqrt(num);
 
-function calc(callback: any, num1?: number, num2?: number): number | string | Error {
+function calc(callback: any, num1?: number, num2?: number): number | Error {
 
 	if (typeof num1 !== 'number' && typeof num1 !== 'undefined') {
 		return new Error("Only numbers accepted.");
